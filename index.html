@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Space+Grotesk"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left_div">
+        <span id="cardLogo"><svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="20" ry="20" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg></span>
+        <div class="card_data">
+          <p id="cardNum">0000 0000 0000 0000</p>
+          <p id="cardName">JANE APPLESEED</p>
+          <P id="cardExpDate">00/00</P>
+        </div>
+        <div class="card_cvc">
+          <p id="cardCvc">000</p>
+        </div>
+        <img src="./images/bg-card-front.png" id="cardFront" />
+        <div class="shadow_box_front"></div>
+        <img src="./images/bg-card-back.png" id="cardBack" />
+        <div class="shadow_box_back"></div>
+      </div>
+      <div class="right_div">
+        <form action="" id="cardForm">
+          <label for="cardNameInput">CARDHOLDER NAME</label>
+          <input
+            type="text"
+            name="name"
+            id="cardNameInput"
+            placeholder="e.g.Jane Appleseed"
+            onkeyup="showName(); checkName(); isEnabled()"
+            maxlength="30"
+          />
+          <span id="nameError" class="error"></span>
+          
+          <label for="cardNumInput">CARD NUMBER</label>
+          <input
+          class="form-input"
+            type="text"
+            name="cardNum"
+            id="cardNumInput"
+            placeholder="e.g.1234 5678 9123 0000"
+            onkeyup="showCardNum();checkNum(); isEnabled()"
+            maxlength="16"
+          />
+          <span id="numError" class="error"></span>
+          <div class="date_cvc_label">
+            <div class="date_label">
+              <label>EXP. DATE (MM/YY)</label>
+              <div>
+                <input type="text" name="" id="cardMonth" placeholder="MM" onkeyup="showDate(); checkDate(); isEnabled()" maxlength="2"/>
+                <input type="text" name="" id="cardYear" placeholder="YY" onkeyup="showDate(); checkDate(); isEnabled()" maxlength="2"/>
+              </div>
+              <span id="dateError" class="error"></span>
+            </div>
+            <div class="cvc_label">
+              <label>CVC</label>
+              <input type="text" name="" id="cvcNumInput" placeholder="e.g. 123" onkeyup="showCvc(); checkCvc(); isEnabled()" maxlength="3"/>
+              <span id="cvcError" class="error"></span>
+            </div>
+          </div>
+          <button id="confirmBtn" disabled onclick="showThankU()">Confirm</button>
+        </form>
+
+        <!--Thank you-->
+        <div class="thank_you" id="thankYou" style="display: none;">
+          <span id="complete"><svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg></span>
+          <h2>THANK YOU!</h2>
+          <P>We've added your card details</P>
+          <input type="button" value="Continue" id="continueBtn">
+        </div>
+
+      </div>
+    </div>
+
+    <script src="./project.js"></script>
+  </body>
+</html>
