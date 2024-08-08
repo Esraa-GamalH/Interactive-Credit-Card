@@ -1,6 +1,7 @@
-# Interactive-Credit-Card
+# Interactive-Credit-Card :credit_card:
 
-This project is a simple web form designed to collect and display credit card details in a user-friendly manner. It features real-time input validation and a dynamic display of card information as the user types.
+This project is a dynamic credit card form that provides real-time validation and display of card details. It ensures that users input correct and formatted information by validating the cardholder's name, card number, expiration date, and CVC. As users fill out the form, the card details are updated instantly on a mock card image. The form includes validations for correct formats and input ranges, enhancing user experience and data accuracy.
+
 
 ## Screenshots
 ![Features](demo/1.png)
